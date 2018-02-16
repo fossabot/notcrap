@@ -6,7 +6,7 @@ Object.defineProperties(HTMLElement.prototype,
   {
     setStyle:
  {
-   get() {
+   get(c,d) {
      return function (c, d) {
        this.style[c] = d;
      };
@@ -30,7 +30,7 @@ Object.defineProperties(HTMLElement.prototype,
  },
     addClass:
  {
-   get() {
+   get(b) {
      return function (b) {
        this.classList.add(b);
      };
@@ -38,7 +38,7 @@ Object.defineProperties(HTMLElement.prototype,
  },
     removeClass:
  {
-   get() {
+   get(b) {
      return function (b) {
        this.classList.remove(b);
      };
@@ -46,7 +46,7 @@ Object.defineProperties(HTMLElement.prototype,
  },
     toggleClass:
  {
-   get() {
+   get(b) {
      return function (b) {
        this.classList.toggle(b);
      };
@@ -54,7 +54,7 @@ Object.defineProperties(HTMLElement.prototype,
  },
     hasClass:
  {
-   get() {
+   get(b) {
      return function (b) {
        return this.classList.contains(b);
      };
@@ -78,8 +78,8 @@ Object.defineProperties(HTMLElement.prototype,
  },
     addChild:
  {
-   get() {
-     return function () {
+   get(i) {
+     return function (i) {
        const a = document.createElement(i);
        return this.appendChild(a), a;
      };
@@ -96,8 +96,8 @@ Object.defineProperties(HTMLElement.prototype,
  },
     includeHTML:
  {
-   get() {
-     return function () {
+   get(i) {
+     return function (i) {
        ajax(
          {
            url: i,
@@ -109,7 +109,7 @@ Object.defineProperties(HTMLElement.prototype,
  },
     getElementsByAttribute:
  {
-   get() {
+   get(c,d) {
      return function (c, d) {
        for (var e = this.getElementsByTagName('*'), f = [], g = 0, j = e.length; g < j; g++) { d ? e[g].getAttribute(c) == d && f.push(e[g]) : e[g].getAttribute(c) && f.push(e[g]); }
        return f;
