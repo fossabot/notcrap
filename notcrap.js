@@ -140,7 +140,8 @@ Object.defineProperties(HTMLElement.prototype,
 		{
 			return function (c, d)
 			{
-				for (var e = this.getElementsByTagName('*'), f = [], g = 0, j = e.length; g < j; g++) d ? e[g].getAttribute(c) == d && f.push(e[g]) : e[g].getAttribute(c) && f.push(e[g]);
+				for (var e = this.getElementsByTagName('*'), f = [], g = 0, j = e.length; g < j; g++)
+					d ? e[g].getAttribute(c) == d && f.push(e[g]) : e[g].getAttribute(c) && f.push(e[g]);
 				return f;
 			};
 		}
