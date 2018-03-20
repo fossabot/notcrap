@@ -1,6 +1,7 @@
 This is a javascript library, built on `NOTCRAP.js` for a better webpages.
  - Smooth Scrolling
  - Form validation
+ - Custom `<select>`
  - Custom `<css>` tags:<br>
     These are regular `<style>` tags but with <a href="https://sizzlejs.com">`Sizzle`</a> selectors.<br>
     Added selectors are:
