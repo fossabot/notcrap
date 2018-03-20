@@ -20,3 +20,4 @@ This is a javascript library, built on `NOTCRAP.js` for a better webpages.
     - [ ] `:hover`
     - [ ] `:active`
     - [ ] `:visited, :link`
+    
